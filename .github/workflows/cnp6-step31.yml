@@ -119,6 +119,11 @@ jobs:
           path: cloud_out/build/
           if-no-files-found: error
           retention-days: 30
+      - name: Fail if step31 was not built
+        if: steps.build.outputs.return_code != '0'
+        run: |
+          echo "::error::build_step31.sh rc=${{ steps.build.outputs.return_code }} status=$(cat cloud_out/build/STATUS.txt 2>/dev/null || echo missing)"
+          exit 1
 
   colors:
     name: 4. 5彩色探索 ${{ matrix.shard }}
@@ -166,6 +171,7 @@ jobs:
           name: step31-build
           path: cloud_download/build
       - name: Download color attempts
+        continue-on-error: true
         uses: actions/download-artifact@v4
         with:
           pattern: color-*

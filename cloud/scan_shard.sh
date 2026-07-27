@@ -21,7 +21,7 @@ esac
 seed=$((8100000 + SEED_OFFSET*100000 + SHARD))
 outfile="$OUT/candidates_${SHARD}.txt"
 set +e
-timeout 5h10m "$BIN/core_robust_scan_shuf" \
+timeout 310m "$BIN/core_robust_scan_shuf" \
   "$ROOT/cloud_out/input/graph.coords" "$ROOT/cloud_out/input/macro16.coords" \
   current/macro_cegis_30_5.colors "$ROOT/cloud_out/input/fixedmask.txt" \
   "$outfile" "$LIMIT" "$seed"

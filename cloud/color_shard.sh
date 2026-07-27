@@ -19,7 +19,7 @@ case "$MODE" in
 esac
 seed=$((9200000 + SEED_OFFSET*100000 + SHARD*1000))
 set +e
-timeout 5h10m "$BIN/tabucol_seed" "$BUILD/macro_cegis_31_core5.json" 5 \
+timeout 310m "$BIN/tabucol_seed" "$BUILD/macro_cegis_31_core5.json" 5 \
   "$RESTARTS" "$ITERS" "$seed" "$BUILD/core31.seed" "$OUT/core31_${SHARD}.tabu"
 rc=$?
 set -e
