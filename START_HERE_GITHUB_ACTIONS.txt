@@ -1,0 +1,2 @@
+最初に README_GITHUB_ACTIONS_JA.md を開いてください。
+やることは「公開リポジトリ作成 → PowerShell 1行 → Run workflow」です。

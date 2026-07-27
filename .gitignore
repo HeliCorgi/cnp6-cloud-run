@@ -1,0 +1,8 @@
+work/
+logs/*.log
+*.tmp
+__pycache__/
+*.pyc
+cloud_out/
+cloud_download/
+CNP6_STEP31_RESULT.zip

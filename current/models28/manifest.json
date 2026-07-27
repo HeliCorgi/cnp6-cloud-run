@@ -1,0 +1,62 @@
+[
+  {
+    "a": 1,
+    "f": 0.08,
+    "h": "819dcd481a8a683776066f0d22c69973ee333f098c1ce935ed8bcab5ea9a5daf",
+    "colors": "/mnt/data/step27/models28/m1.colors"
+  },
+  {
+    "a": 2,
+    "f": 0.1,
+    "h": "d66cc9003c790c21125631519e438de3bf73e6f7b632d2aa2f240e7d8faf0cf3",
+    "colors": "/mnt/data/step27/models28/m2.colors"
+  },
+  {
+    "a": 3,
+    "f": 0.12,
+    "h": "b52295ce75dd32e958099b1bd82a376c9d725aaafc653d1808a74952e2d2bfe5",
+    "colors": "/mnt/data/step27/models28/m3.colors"
+  },
+  {
+    "a": 4,
+    "f": 0.15,
+    "h": "134059230867ef3dd63915c08c292edc55345998f5120792ca09a6b65fea0f8d",
+    "colors": "/mnt/data/step27/models28/m4.colors"
+  },
+  {
+    "a": 5,
+    "f": 0.18,
+    "h": "b3da26b3cc657947e0e30893a33cc1521dc23b471463b64ff79cb41b56b8cf45",
+    "colors": "/mnt/data/step27/models28/m5.colors"
+  },
+  {
+    "a": 6,
+    "f": 0.2,
+    "h": "4c35504bd6ab4c09757c0b8afbae68ce8aebf07dcc6b32c846fe5d6995e0423c",
+    "colors": "/mnt/data/step27/models28/m6.colors"
+  },
+  {
+    "a": 7,
+    "f": 0.05,
+    "h": "d12d48a274d815ef3f26aa2287c7bb0dfacaaf0eb54703f8fda0dcdff7d06f3d",
+    "colors": "/mnt/data/step27/models28/m7.colors"
+  },
+  {
+    "a": 8,
+    "f": 0.08,
+    "h": "71fc940e4f09c03982f61c4c2484978cac33e3d55dfa0ca13e652ce91d2fc650",
+    "colors": "/mnt/data/step27/models28/m8.colors"
+  },
+  {
+    "a": 9,
+    "f": 0.1,
+    "h": "757b10628ebc9f7906d4ebd85234d769723d9c218162a5592304463fbe30de3b",
+    "colors": "/mnt/data/step27/models28/m9.colors"
+  },
+  {
+    "a": 10,
+    "f": 0.12,
+    "h": "1c23ddf389d1619cdc9854f1d0da470945bf3e8c7e09df054a89aae31981c318",
+    "colors": "/mnt/data/step27/models28/m10.colors"
+  }
+]

@@ -1,0 +1,79 @@
+{
+  "status": "NO_CHI6_PROOF_STEP30_IS_5_COLORABLE",
+  "latest_step": 30,
+  "latest": {
+    "step": 30,
+    "vertices": 68802,
+    "edges": 3216000,
+    "five_color_verified": true,
+    "graph_sha256": "32ba5afa55e88eee5d21821a64526b0704a46496915d8ed8c7f7639c86b0ce98",
+    "colors_sha256": "1abc6088fd5c152b3a2497d24e2c1803a4894fdc266dcd7f7fec50a4ff86ca4e"
+  },
+  "steps": [
+    {
+      "step": 27,
+      "vertices": 66033,
+      "edges": 3046415,
+      "five_color_verified": true,
+      "graph_sha256": "11e7e3a411dd7c66ea11cad6bbad64fe8d2b67a2a89f79b2d37b5318d46a7972",
+      "colors_sha256": "88f0c3000a8efd6a554b13daece4855e2413903e4834893cef1063cbfb601b5d"
+    },
+    {
+      "step": 28,
+      "vertices": 66969,
+      "edges": 3104839,
+      "five_color_verified": true,
+      "graph_sha256": "83767435821d8256eb3ac9cec4a1cf8a87fa30ed8755d24ff7885c7599454076",
+      "colors_sha256": "80db67efeaa1a639bdb6fa605d369f98cf1fc9b05efe86a6c88e3a86cfffef19"
+    },
+    {
+      "step": 29,
+      "vertices": 67916,
+      "edges": 3162288,
+      "five_color_verified": true,
+      "graph_sha256": "c0f64a22c5dd65b07bf1d70a03950df400230dc2e65fc5a94b823b64f56743f7",
+      "colors_sha256": "c44e49059a3b71056a8e5cce6c792558a3f094b89dd8379d71ad5ab2dfc012b0"
+    },
+    {
+      "step": 30,
+      "vertices": 68802,
+      "edges": 3216000,
+      "five_color_verified": true,
+      "graph_sha256": "32ba5afa55e88eee5d21821a64526b0704a46496915d8ed8c7f7639c86b0ce98",
+      "colors_sha256": "1abc6088fd5c152b3a2497d24e2c1803a4894fdc266dcd7f7fec50a4ff86ca4e"
+    }
+  ],
+  "campaign": [
+    {
+      "source_step": 27,
+      "models": 20,
+      "candidates": 5000,
+      "kill_all": 792,
+      "selected": 100,
+      "result_step": 28,
+      "result": "5-SAT",
+      "tabucol_iterations": 159460
+    },
+    {
+      "source_step": 28,
+      "models": 11,
+      "candidates": 5000,
+      "kill_all": 2077,
+      "selected": 100,
+      "result_step": 29,
+      "result": "5-SAT",
+      "tabucol_iterations": 11402610
+    },
+    {
+      "source_step": 29,
+      "models": 9,
+      "candidates": 5000,
+      "kill_all": 3227,
+      "selected": 100,
+      "result_step": 30,
+      "result": "5-SAT",
+      "tabucol_iterations": 3048475
+    }
+  ],
+  "warning": "Coordinates are floating approximations; no chi>=6 proof. A future 5-UNSAT result would require exact-coordinate reconstruction and an independently checkable UNSAT proof."
+}

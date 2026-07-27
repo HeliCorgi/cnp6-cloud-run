@@ -1,0 +1,17 @@
+{
+  "vertices": 68802,
+  "edges": 3216000,
+  "max_abs_length_error": 2.9993509054193623e-07,
+  "max_error_edge": [
+    37453,
+    61635
+  ],
+  "mean_abs_length_error": 1.6000616160336907e-08,
+  "counts_above": {
+    "1e-08": 1753177,
+    "1e-07": 19247,
+    "3e-07": 0,
+    "1e-06": 0
+  },
+  "elapsed_seconds": 2.144231081008911
+}

@@ -1,0 +1,29 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "CNP6: Verify step30",
+      "type": "shell",
+      "command": "bash scripts/verify_current.sh",
+      "options": {"cwd": "${workspaceFolder}"},
+      "problemMatcher": []
+    },
+    {
+      "label": "CNP6: Resume step31",
+      "type": "shell",
+      "command": "bash scripts/resume_step31.sh",
+      "options": {"cwd": "${workspaceFolder}"},
+      "problemMatcher": [],
+      "group": {"kind": "build", "isDefault": true},
+      "presentation": {"reveal": "always", "panel": "dedicated", "clear": false}
+    },
+    {
+      "label": "CNP6: Resume step31 (small smoke test)",
+      "type": "shell",
+      "command": "MODELS=5 SCAN_SEEDS=2 CANDIDATES_PER_SEED=30 SELECT_COUNT=10 MODEL_ITERS=2000000 COLOR_ITERS=5000000 bash scripts/resume_step31.sh",
+      "options": {"cwd": "${workspaceFolder}"},
+      "problemMatcher": [],
+      "presentation": {"reveal": "always", "panel": "dedicated", "clear": false}
+    }
+  ]
+}

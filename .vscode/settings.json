@@ -1,0 +1,13 @@
+{
+  "files.exclude": {
+    "**/__pycache__": true,
+    "work/bin": true
+  },
+  "terminal.integrated.defaultProfile.linux": "bash",
+  "python.analysis.typeCheckingMode": "basic",
+  "files.associations": {
+    "*.colors": "plaintext",
+    "*.seed": "plaintext",
+    "*.tabu": "plaintext"
+  }
+}

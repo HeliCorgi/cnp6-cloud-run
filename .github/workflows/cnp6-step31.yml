@@ -1,0 +1,188 @@
+name: CNP6 Step 31 Cloud
+
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "計算量（最初は quick 推奨）"
+        required: true
+        default: quick
+        type: choice
+        options:
+          - quick
+          - normal
+          - full
+      seed_offset:
+        description: "再実行時に変える整数（最初は0）"
+        required: true
+        default: "0"
+      select_count:
+        description: "追加するキラー配置数"
+        required: true
+        default: "100"
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    name: 1. 現在地を検証
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify step 30
+        run: python3 scripts/verify_checkpoint.py current/macro_cegis_30.json current/macro_cegis_30_5.colors --checkpoint current/macro_cegis_30_checkpoint.json
+
+  models:
+    name: 2A. 彩色モデル ${{ matrix.shard }}
+    needs: verify
+    runs-on: ubuntu-latest
+    timeout-minutes: 340
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [0,1,2,3,4,5,6,7,8,9]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Generate diverse 5-colorings
+        run: bash cloud/model_shard.sh "${{ matrix.shard }}" "${{ inputs.mode }}" "${{ inputs.seed_offset }}"
+      - name: Upload model shard
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: models-${{ matrix.shard }}
+          path: cloud_out/models_${{ matrix.shard }}/
+          if-no-files-found: warn
+          retention-days: 30
+
+  scans:
+    name: 2B. 幾何候補 ${{ matrix.shard }}
+    needs: verify
+    runs-on: ubuntu-latest
+    timeout-minutes: 340
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [0,1,2,3,4,5,6,7,8,9]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Scan robust placements
+        run: bash cloud/scan_shard.sh "${{ matrix.shard }}" "${{ inputs.mode }}" "${{ inputs.seed_offset }}"
+      - name: Upload scan shard
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: scans-${{ matrix.shard }}
+          path: cloud_out/scan_${{ matrix.shard }}/
+          if-no-files-found: warn
+          retention-days: 30
+
+  build:
+    name: 3. step31を構築
+    needs: [models, scans]
+    if: always()
+    runs-on: ubuntu-latest
+    timeout-minutes: 340
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download model shards
+        uses: actions/download-artifact@v4
+        with:
+          pattern: models-*
+          path: cloud_download/models
+          merge-multiple: true
+      - name: Download scan shards
+        uses: actions/download-artifact@v4
+        with:
+          pattern: scans-*
+          path: cloud_download/scans
+          merge-multiple: true
+      - name: Build next graph
+        id: build
+        shell: bash
+        run: |
+          set +e
+          bash cloud/build_step31.sh "${{ inputs.mode }}" "${{ inputs.select_count }}"
+          rc=$?
+          echo "return_code=$rc" >> "$GITHUB_OUTPUT"
+          exit 0
+      - name: Build summary
+        run: |
+          echo '## step31 構築結果' >> "$GITHUB_STEP_SUMMARY"
+          cat cloud_out/build/STATUS.txt >> "$GITHUB_STEP_SUMMARY" || true
+      - name: Upload step31 build
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: step31-build
+          path: cloud_out/build/
+          if-no-files-found: error
+          retention-days: 30
+
+  colors:
+    name: 4. 5彩色探索 ${{ matrix.shard }}
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 340
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [0,1,2,3,4,5,6,7]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download build
+        uses: actions/download-artifact@v4
+        with:
+          name: step31-build
+          path: cloud_download/build
+      - name: Check build exists
+        id: check
+        run: |
+          if [[ -f cloud_download/build/macro_cegis_31_core5.json ]]; then echo 'ok=yes' >> "$GITHUB_OUTPUT"; else echo 'ok=no' >> "$GITHUB_OUTPUT"; fi
+      - name: Search for a 5-coloring
+        if: steps.check.outputs.ok == 'yes'
+        run: bash cloud/color_shard.sh "${{ matrix.shard }}" "${{ inputs.mode }}" "${{ inputs.seed_offset }}"
+      - name: Upload color attempt
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: color-${{ matrix.shard }}
+          path: cloud_out/color_${{ matrix.shard }}/
+          if-no-files-found: warn
+          retention-days: 30
+
+  finalize:
+    name: 5. 結果ZIPを作る
+    needs: [build, colors]
+    if: always()
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download build
+        uses: actions/download-artifact@v4
+        with:
+          name: step31-build
+          path: cloud_download/build
+      - name: Download color attempts
+        uses: actions/download-artifact@v4
+        with:
+          pattern: color-*
+          path: cloud_download/colors
+          merge-multiple: true
+      - name: Finalize and verify
+        run: bash cloud/finalize.sh
+      - name: Result summary
+        run: |
+          echo '## CNP6 Step 31' >> "$GITHUB_STEP_SUMMARY"
+          cat cloud_out/final/RESULT.txt >> "$GITHUB_STEP_SUMMARY"
+          echo '' >> "$GITHUB_STEP_SUMMARY"
+          echo '画面下部の Artifacts から CNP6-step31-result をダウンロードしてください。' >> "$GITHUB_STEP_SUMMARY"
+      - name: Upload final result
+        uses: actions/upload-artifact@v4
+        with:
+          name: CNP6-step31-result
+          path: CNP6_STEP31_RESULT.zip
+          if-no-files-found: error
+          retention-days: 30

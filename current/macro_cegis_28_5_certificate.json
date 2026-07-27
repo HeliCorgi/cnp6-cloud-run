@@ -1,0 +1,15 @@
+{
+  "graph": "macro_cegis_28.json",
+  "vertices": 66969,
+  "edges": 3104839,
+  "counts": {
+    "4": 12286,
+    "0": 13066,
+    "1": 15539,
+    "2": 13627,
+    "3": 12451
+  },
+  "bad_edges": 0,
+  "sha256_colors": "80db67efeaa1a639bdb6fa605d369f98cf1fc9b05efe86a6c88e3a86cfffef19",
+  "sha256_graph": "83767435821d8256eb3ac9cec4a1cf8a87fa30ed8755d24ff7885c7599454076"
+}

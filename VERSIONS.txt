@@ -1,0 +1,4 @@
+Package created: 2026-07-27
+Python 3.13.5
+g++ (Debian 14.2.0-19) 14.2.0
+Linux 70d40137383e 6.12.13 #1 SMP Wed Jul 22 00:33:13 UTC 2026 x86_64 GNU/Linux

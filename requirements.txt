@@ -1,0 +1,5 @@
+# The default continuation pipeline uses only the Python standard library.
+# GNU g++ with C++17 support is required for the C++ tools.
+# Optional exact solving:
+# z3-solver
+# python-sat

@@ -1,0 +1,24 @@
+{
+  "snapshot_date": "2026-07-27",
+  "timezone": "Asia/Tokyo",
+  "goal": "finite unit-distance graph with no proper 5-coloring",
+  "proof_status": "NOT_PROVED",
+  "latest_macro_step": 30,
+  "latest_macro_graph": {
+    "path": "current/macro_cegis_30.json",
+    "vertices": 68802,
+    "edges": 3216000,
+    "five_colorable": true,
+    "verified_coloring": "current/macro_cegis_30_5.colors",
+    "core_vertices": 14886,
+    "core_edges": 108924,
+    "graph_sha256": "32ba5afa55e88eee5d21821a64526b0704a46496915d8ed8c7f7639c86b0ce98",
+    "colors_sha256": "1abc6088fd5c152b3a2497d24e2c1803a4894fdc266dcd7f7fec50a4ff86ca4e"
+  },
+  "semantic_deceit_pair_checkpoint": {
+    "path": "semantic/distforge_pairs.npz",
+    "reported_pairs": 15401
+  },
+  "next_action": "Run scripts/resume_step31.sh locally under VS Code Remote-WSL; generate >=50 canonical-distinct models and build step31.",
+  "critical_warning": "Solver timeout or heuristic failure is UNKNOWN, not UNSAT. Floating coordinates are exploratory and cannot support a final chi>=6 proof."
+}

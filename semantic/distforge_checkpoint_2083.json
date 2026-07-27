@@ -1,0 +1,32 @@
+{
+  "pairs": 2083,
+  "vertices": 393,
+  "phase_counts": {
+    "star-robust": 70,
+    "star-milp": 4,
+    "star-bitset": 123,
+    "full-distributed": 192
+  },
+  "latest": {
+    "phase": "full-distributed",
+    "pairs": 2082,
+    "nshapes": 2,
+    "natoms": 4,
+    "shapes": [
+      [
+        7,
+        13
+      ],
+      [
+        4,
+        245
+      ]
+    ],
+    "status": "SAT",
+    "master_sec": 0.43236327171325684,
+    "oracle_sec": 0.07736420631408691,
+    "new_pair": true
+  },
+  "sha256_trace": "3e61821bef6456da19b16c3e39edd38c75b8de04213e336ad0f7a4a1746111d8",
+  "status": "SAT counterexamples only; no distributed interface found"
+}

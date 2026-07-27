@@ -1,0 +1,15 @@
+{
+  "vertices": 6621,
+  "edges": 28717,
+  "colors": 5,
+  "source_case": "case00",
+  "onehot_bad": 0,
+  "edge_bad": 0,
+  "used_colors": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ]
+}

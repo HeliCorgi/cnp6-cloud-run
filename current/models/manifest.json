@@ -1,0 +1,126 @@
+[
+  {
+    "attempt": 1,
+    "canonical_sha256": "46bc471268327ced188be0375b1b9f9b0c60227e64bebcfa1164daf360bdde17",
+    "tabu": "/mnt/data/step27/models/model_1.tabu",
+    "colors": "/mnt/data/step27/models/model_1.colors"
+  },
+  {
+    "attempt": 2,
+    "canonical_sha256": "d79f89e67cb83c33109d5d753630e03704af8ee7ad8601680ab1640dd2d502f3",
+    "tabu": "/mnt/data/step27/models/model_2.tabu",
+    "colors": "/mnt/data/step27/models/model_2.colors"
+  },
+  {
+    "attempt": 3,
+    "canonical_sha256": "41db8598229073fc242185623d96675b3089af4229008e10c26d5bf003365da4",
+    "tabu": "/mnt/data/step27/models/model_3.tabu",
+    "colors": "/mnt/data/step27/models/model_3.colors"
+  },
+  {
+    "attempt": 4,
+    "canonical_sha256": "4e3ca046d9e0fedb95e0d2a423ebcb6d9a6c0b0aa61c062d2849d1ab4044bd18",
+    "tabu": "/mnt/data/step27/models/model_4.tabu",
+    "colors": "/mnt/data/step27/models/model_4.colors"
+  },
+  {
+    "attempt": 5,
+    "canonical_sha256": "5c087242b06820ba41d390c168ee68c8e748d5a3d262f6f480c399ea836ce559",
+    "tabu": "/mnt/data/step27/models/model_5.tabu",
+    "colors": "/mnt/data/step27/models/model_5.colors"
+  },
+  {
+    "attempt": 6,
+    "canonical_sha256": "94262602bb4684705a2abdc056a0f59ddb15847ef8cabd9f4d6df6809608b710",
+    "tabu": "/mnt/data/step27/models/model_6.tabu",
+    "colors": "/mnt/data/step27/models/model_6.colors"
+  },
+  {
+    "attempt": 7,
+    "canonical_sha256": "1aa22bce5aecbf5eac75e4dc8cf81903fa5d70860d7779df670cad40026bc2f0",
+    "tabu": "/mnt/data/step27/models/model_7.tabu",
+    "colors": "/mnt/data/step27/models/model_7.colors"
+  },
+  {
+    "attempt": 8,
+    "canonical_sha256": "56abc0501f2e64acfaf898afdfb0ab91611332d0703d2dc0fa89dbc05d7f4a5f",
+    "tabu": "/mnt/data/step27/models/model_8.tabu",
+    "colors": "/mnt/data/step27/models/model_8.colors"
+  },
+  {
+    "attempt": 9,
+    "canonical_sha256": "49f1949a38baee5cbc1db9e82541490db79d6e34775aac301697deae8e23b17e",
+    "tabu": "/mnt/data/step27/models/model_9.tabu",
+    "colors": "/mnt/data/step27/models/model_9.colors"
+  },
+  {
+    "attempt": 10,
+    "fraction": 0.12,
+    "canonical_sha256": "dc0f8d1552357b0e522f1e7cafa96c2135e3588642a234b93d2f62844562ef8c",
+    "tabu": "/mnt/data/step27/models/model_10.tabu",
+    "colors": "/mnt/data/step27/models/model_10.colors"
+  },
+  {
+    "attempt": 11,
+    "fraction": 0.15,
+    "canonical_sha256": "121bba0c2c438697df465e7841e7a3143eb2d8dcdab46e743932c44503dc2236",
+    "tabu": "/mnt/data/step27/models/model_11.tabu",
+    "colors": "/mnt/data/step27/models/model_11.colors"
+  },
+  {
+    "attempt": 12,
+    "fraction": 0.18,
+    "canonical_sha256": "95b5af450808440c87f845d55aff9b89b901808cc9d998cc41e9a0428f07f658",
+    "tabu": "/mnt/data/step27/models/model_12.tabu",
+    "colors": "/mnt/data/step27/models/model_12.colors"
+  },
+  {
+    "attempt": 13,
+    "fraction": 0.2,
+    "canonical_sha256": "b518775bfd12f2d0919a7da7c6fc04a5cd022ce2897bec8e0088b07969c34cfe",
+    "tabu": "/mnt/data/step27/models/model_13.tabu",
+    "colors": "/mnt/data/step27/models/model_13.colors"
+  },
+  {
+    "attempt": 14,
+    "fraction": 0.05,
+    "canonical_sha256": "110b2654b7c4169e01dc318d1d8d15c1064f0c3239cc43cc06257b69a919abbb",
+    "tabu": "/mnt/data/step27/models/model_14.tabu",
+    "colors": "/mnt/data/step27/models/model_14.colors"
+  },
+  {
+    "attempt": 15,
+    "fraction": 0.08,
+    "canonical_sha256": "44136d67f5f98b3366dc02ebd86f0510dbe44af3777f956e0d1a7fe2ecb38d78",
+    "tabu": "/mnt/data/step27/models/model_15.tabu",
+    "colors": "/mnt/data/step27/models/model_15.colors"
+  },
+  {
+    "attempt": 16,
+    "fraction": 0.1,
+    "canonical_sha256": "a22c377ea73517c9ba10ff370ec3b1897d548352b91c3e128271a0d69f2d4212",
+    "tabu": "/mnt/data/step27/models/model_16.tabu",
+    "colors": "/mnt/data/step27/models/model_16.colors"
+  },
+  {
+    "attempt": 17,
+    "fraction": 0.12,
+    "canonical_sha256": "d2b7c06b80e7430c731323350557cd249347b1975157445a27713fa6842dd47c",
+    "tabu": "/mnt/data/step27/models/model_17.tabu",
+    "colors": "/mnt/data/step27/models/model_17.colors"
+  },
+  {
+    "attempt": 18,
+    "fraction": 0.15,
+    "canonical_sha256": "9e3f0727a84c0cb83f5f21dd3c25e46b1a84fbd36003e54cd135db56512f726d",
+    "tabu": "/mnt/data/step27/models/model_18.tabu",
+    "colors": "/mnt/data/step27/models/model_18.colors"
+  },
+  {
+    "attempt": 19,
+    "fraction": 0.18,
+    "canonical_sha256": "5c32b7ec827c90aa4dc7efb580cdb96c17c1a07b422084e850627ce4d9fff851",
+    "tabu": "/mnt/data/step27/models/model_19.tabu",
+    "colors": "/mnt/data/step27/models/model_19.colors"
+  }
+]
